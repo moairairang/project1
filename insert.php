@@ -1,9 +1,8 @@
 <?php
 include "connect.php";
-$zone = $_GET['zone'];
 
-$sql = "INSERT INTO tbl_smarthome (zone, board, temp, humi, dmy) 
-VALUES ('$zone', '$_GET[board]', '$_GET[temp]', '$_GET[humi]', now())";
+$sql = "INSERT INTO smartfarm (zone, board, temp, Himu, Dmy) 
+VALUES ('$_POST[zone]', '$_POST[board]', '$_POST[temp]', '$_POST[Himu]',now())";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";
